@@ -88,6 +88,21 @@
         </div>
     </div>
     
+    <script>
+        // 检查登录状态
+        (function() {
+            var isLoggedIn = localStorage.getItem('adminLoggedIn');
+            if (!isLoggedIn) {
+                window.location.href = 'index.html';
+                return;
+            }
+            // 显示用户名
+            var adminUser = localStorage.getItem('adminUser');
+            if (adminUser) {
+                document.getElementById('adminName').textContent = adminUser;
+            }
+        })();
+    </script>
     <script src="https://res.wx.qq.com/open/js/cloudbase/1.1.0/cloud.js"></script>
     <script src="js/app.js"></script>
     <script src="js/dashboard.js"></script>
