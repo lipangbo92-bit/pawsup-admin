@@ -8,20 +8,7 @@
     <meta http-equiv="Expires" content="0">
     <title>PawsUp 爪哇宠屋 - 管理仪表盘</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-    // 检查登录状态
-    (function() {
-        var isLoggedIn = localStorage.getItem('adminLoggedIn');
-        console.log('Dashboard loaded, login status:', isLoggedIn);
-        
-        if (!isLoggedIn || isLoggedIn !== 'true') {
-            console.log('Not logged in, redirecting to index');
-            window.location.href = './index.html';
-            return;
-        }
-        console.log('User is logged in, showing dashboard');
-    })();
-    </script>
+
 </head>
 <body>
     <div class="dashboard-container">
@@ -105,28 +92,7 @@
         </div>
     </div>
     
-    <script>
-        // 检查登录状态 (body check)
-        (function() {
-            var isLoggedIn = localStorage.getItem('adminLoggedIn');
-            console.log('Body check - login status:', isLoggedIn);
-            
-            if (!isLoggedIn || isLoggedIn !== 'true') {
-                console.log('Body check - Not logged in, redirecting');
-                window.location.href = 'index';
-                return;
-            }
-            
-            // 显示用户名
-            var adminUser = localStorage.getItem('adminUser');
-            if (adminUser) {
-                var nameEl = document.getElementById('adminName');
-                if (nameEl) {
-                    nameEl.textContent = adminUser;
-                }
-            }
-        })();
-    </script>
+
     <script src="https://res.wx.qq.com/open/js/cloudbase/1.1.0/cloud.js"></script>
     <script src="js/app.js"></script>
     <script src="js/dashboard.js"></script>

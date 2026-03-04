@@ -8,11 +8,7 @@
     <meta http-equiv="Expires" content="0">
     <title>PawsUp 爪哇宠屋 - 订单管理</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-    if (!localStorage.getItem('adminLoggedIn')) {
-        window.location.href = "./index";
-    }
-    </script>
+
 </head>
 <body>
     <div class="dashboard-container">
@@ -89,14 +85,7 @@
         </div>
     </div>
     
-    <script>
-        // 检查登录状态
-        (function() {
-            if (!localStorage.getItem('adminLoggedIn')) {
-                window.location.href = "./index";
-            }
-        })();
-    </script>
+
     <script src="https://res.wx.qq.com/open/js/cloudbase/1.1.0/cloud.js"></script>
     <script src="js/app.js"></script>
     <script src="js/orders.js"></script>
