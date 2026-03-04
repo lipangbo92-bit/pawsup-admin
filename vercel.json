@@ -1,17 +1,5 @@
 {
   "rewrites": [
-    { "source": "/dashboard", "destination": "/dashboard.html" },
-    { "source": "/orders", "destination": "/orders.html" },
-    { "source": "/services", "destination": "/services.html" },
-    { "source": "/statistics", "destination": "/statistics.html" },
-    { "source": "/technicians", "destination": "/technicians.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache" }
-      ]
-    }
+    { "source": "/:path*", "destination": "/:path*" }
   ]
 }
