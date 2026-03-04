@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>PawsUp 爪哇宠屋 - 管理登录</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -89,12 +92,16 @@
                 return;
             }
             
+            console.log('Attempting login for user:', username);
+            
             // 保存登录状态
             localStorage.setItem('adminLoggedIn', 'true');
             localStorage.setItem('adminUser', username);
             
+            console.log('Login status set, redirecting to dashboard');
+            
             // 跳转到 dashboard
-            window.location.href = './dashboard.html';
+            window.location.href = 'dashboard.html';
         }
     </script>
 </body>
