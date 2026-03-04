@@ -2,5 +2,7 @@
   "name": "pawsup-admin",
   "version": "1.0.0",
   "private": true,
-  "scripts": {}
+  "scripts": {
+    "build": "echo 'Static site - no build required'"
+  }
 }
